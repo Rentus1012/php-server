@@ -51,7 +51,7 @@
                      <div class="mb-3 row">
                         <label class="col-sm-2">상세정보</label>
                         <div class="col-sm-5">
-                             <textarea name="description" cols="50" rows="2"
+                             <textarea id = "description" name="description" cols="50" rows="2"
                     class="form-control" placeholder="100자 이상 적어주세요"></textarea>
                          </div>
                     </div>       
@@ -64,7 +64,7 @@
                     <div class="mb-3 row">
                         <label class="col-sm-2">재고수</label>
                         <div class="col-sm-3">
-                            <input type="text" name="unitsInStock" class="form-control" >
+                            <input type="text" id = "unitInStock" name="unitsInStock" class="form-control" >
                         </div>
                     </div>
                     <div class="mb-3 row">
@@ -89,9 +89,10 @@
                     </div>		
                     <div class="mb-3 row">
                         <div class="col-sm-offset-2 col-sm-10 ">
-                            <input type="submit" class="btn btn-primary" value="등록" onclick="CheckAddBook()">
+                            <input type="submit" class="btn btn-primary" value="등록" onclick="return CheckAddBook()">
+                            <!-- 그 함수는 validation.js 이라는 외부 함수를 가져다 쓰는것임. Line 7, return 을 안써주면 잘못 입력해도 그냥 넘어감.-->
                         </div>
-                    </div>        
+                    </div>
                 </form>
             </div>     
         </div>
